@@ -1,0 +1,65 @@
+{
+  "Questions": [
+    {
+      "standard" : [
+        {
+          "question": "Have you ever passed out from drinking too much?",
+          "type": "truth_or_drink",
+          "who": "player",
+          "sips": 2
+        },
+        {
+          "question": "Would you rather be forced to sing along or dance to every single song you hear?",
+          "type": "would_you_rather",
+          "who": "all",
+          "sips": 3
+        }
+      ],
+
+      "school_and_work": [
+        {
+          "question": "Have you seen the new Avatar movie?",
+          "type": "truth_or_drink",
+          "who": "player",
+          "sips": 1
+        },
+        {
+          "question": "Have you ever cheated on a test?",
+          "type": "truth_or_drink",
+          "who": "player",
+          "sips": 3
+        }
+      ],
+
+      "bruh": [
+        {
+          "question": "Would you rather have dick sized nipples or a nipple sized dick?",
+          "type": "would_you_rather",
+          "who": "all",
+          "sips": 4
+        },
+        {
+          "question": "Show them toes?",
+          "type": "dare_or_drink",
+          "who": "player",
+          "sips": 5
+        }
+      ],
+
+      "dirty": [
+        {
+          "question": "Everyone who has used the pullout method",
+          "type": "general",
+          "who": "all",
+          "sips": 3
+        },
+        {
+          "question": "Have you ever done the gulp gulp 3000 suck to someone?",
+          "type": "truth_or_drink",
+          "who": "player",
+          "sips": 2
+        }
+      ]
+    }
+  ]
+}
