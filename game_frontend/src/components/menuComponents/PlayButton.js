@@ -16,20 +16,20 @@ const PlayButton = ({ checkedBoxes }) => {
   }
 
   return (
-    <>
+    <div style={{ zIndex: 1 }}>
       <div style={hideWhenVisible}>
-        <button onClick={handleNoBoxesClick}>
+        <button className='button1' onClick={handleNoBoxesClick}>
           Play
         </button>
       </div>
       <div style={showWhenVisible}>
         <Link to="/play">
-          <button type='button'>
+          <button type='button' className='button1'>
             Play
           </button>
         </Link>
       </div>
-    </>
+    </div>
   )
 }
 

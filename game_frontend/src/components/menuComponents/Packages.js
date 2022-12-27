@@ -29,11 +29,19 @@ const Packages = ({ setCheckedPackages }) => {
   }
 
   return (
-    <div>
-      <Checkbox label='Standard' value={standardChecked} onChange={handleChangeStandard}/>
-      <Checkbox label='School and work' value={school_and_work_checked} onChange={handle_change_school_and_work}/>
-      <Checkbox label={<Emoji symbol='💀' label='bruh'/>} value={bruhChecked} onChange={handleChangeBruh}/>
-      <Checkbox label={<Emoji symbol='💋' label='dirty'/>} value={dirtyChecked} onChange={handleChangeDirty}/>
+    <div style={{ zIndex: 1 }}>
+      <div className='package'>
+        <Checkbox label='  Standard' value={standardChecked} onChange={handleChangeStandard} br/>
+      </div>
+      <div className='package'>
+        <Checkbox label='  School and work' value={school_and_work_checked} onChange={handle_change_school_and_work}/>
+      </div>
+      <div className='package'>
+        <Checkbox label={<Emoji symbol='💀' label='bruh'/>} value={bruhChecked} onChange={handleChangeBruh}/>
+      </div>
+      <div className='package'>
+        <Checkbox label={<Emoji symbol='💋' label='dirty'/>} value={dirtyChecked} onChange={handleChangeDirty}/>
+      </div>
     </div>
   )
 
