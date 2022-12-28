@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Emoji from './Emoji'
 
 const Packages = ({ setCheckedPackages }) => {
@@ -7,26 +7,26 @@ const Packages = ({ setCheckedPackages }) => {
   const [bruhChecked, setBruhChecked] = useState(false)
   const [dirtyChecked, setDirtyChecked] = useState(false)
 
-
   const handleChangeStandard = () => {
     setStandardChecked(!standardChecked)
-    setCheckedPackages([{ standard: standardChecked }, { school_and_work: school_and_work_checked }, { bruh: bruhChecked }, { dirty: dirtyChecked }])
   }
 
   const handle_change_school_and_work = () => {
     set_school_and_work_checked(!school_and_work_checked)
-    setCheckedPackages([{ standard: standardChecked }, { school_and_work: school_and_work_checked }, { bruh: bruhChecked }, { dirty: dirtyChecked }])
   }
 
   const handleChangeBruh = () => {
     setBruhChecked(!bruhChecked)
-    setCheckedPackages([{ standard: standardChecked }, { school_and_work: school_and_work_checked }, { bruh: bruhChecked }, { dirty: dirtyChecked }])
   }
 
   const handleChangeDirty = () => {
     setDirtyChecked(!dirtyChecked)
-    setCheckedPackages([{ standard: standardChecked }, { school_and_work: school_and_work_checked }, { bruh: bruhChecked }, { dirty: dirtyChecked }])
   }
+
+  //updates CheckedPackages only after a checkbox has been clicked instead of before click is finished.
+  useEffect(() => {
+    setCheckedPackages([{ standard: standardChecked }, { school_and_work: school_and_work_checked }, { bruh: bruhChecked }, { dirty: dirtyChecked }])
+  }, [standardChecked, school_and_work_checked, bruhChecked, dirtyChecked])
 
   return (
     <div style={{ zIndex: 1 }}>

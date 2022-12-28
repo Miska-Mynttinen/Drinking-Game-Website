@@ -1,12 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const PlayButton = ({ checkedBoxes }) => {
+const PlayButton = ({ checkedPackages }) => {
   let view = false
 
-  if (checkedBoxes > 0) {
-    view = true
-  }
+  checkedPackages.forEach(checked => {
+    if (Object.values(checked)[0] === true) {
+      view = true
+    }
+  })
 
   const hideWhenVisible = { display: view ? 'none' : '' }
   const showWhenVisible = { display: view ? '' : 'none' }

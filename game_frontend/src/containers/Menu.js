@@ -9,7 +9,7 @@ const Menu = ({ checkedPackages, setCheckedPackages }) => {
     <div>
       <div className="context">
         <TopText />
-        <PlayButton checkedBoxes={checkedPackages.length} />
+        <PlayButton checkedPackages={checkedPackages}/>
         <Packages setCheckedPackages={setCheckedPackages}/>
         <CreatorText />
       </div>
