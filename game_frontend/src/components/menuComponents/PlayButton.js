@@ -25,7 +25,7 @@ const PlayButton = ({ checkedPackages }) => {
         </button>
       </div>
       <div style={showWhenVisible}>
-        <Link to="/play">
+        <Link to="/players">
           <button type='button' className='button1'>
             Play
           </button>
