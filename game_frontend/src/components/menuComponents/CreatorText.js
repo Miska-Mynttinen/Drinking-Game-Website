@@ -6,7 +6,6 @@ const CreatorText = () => {
     position: 'absolute',
     top: '95%',
     right: '0%',
-    zIndex: 1
   }
 
   return (

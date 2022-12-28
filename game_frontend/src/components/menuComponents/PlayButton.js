@@ -18,7 +18,7 @@ const PlayButton = ({ checkedPackages }) => {
   }
 
   return (
-    <div style={{ zIndex: 1 }}>
+    <div>
       <div style={hideWhenVisible}>
         <button className='button1' onClick={handleNoBoxesClick}>
           Play

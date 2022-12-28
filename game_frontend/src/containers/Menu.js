@@ -7,7 +7,7 @@ import CreatorText from '../components/menuComponents/CreatorText'
 const Menu = ({ checkedPackages, setCheckedPackages }) => {
   return (
     <div>
-      <div className="context">
+      <div className="context" style={{ zIndex: 1 }}>
         <TopText />
         <PlayButton checkedPackages={checkedPackages}/>
         <Packages setCheckedPackages={setCheckedPackages}/>

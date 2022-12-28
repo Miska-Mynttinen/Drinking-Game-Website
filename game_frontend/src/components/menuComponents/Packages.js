@@ -29,7 +29,7 @@ const Packages = ({ setCheckedPackages }) => {
   }, [standardChecked, school_and_work_checked, bruhChecked, dirtyChecked])
 
   return (
-    <div style={{ zIndex: 1 }}>
+    <div>
       <div className='package'>
         <Checkbox label='  Standard' value={standardChecked} onChange={handleChangeStandard} br/>
       </div>
