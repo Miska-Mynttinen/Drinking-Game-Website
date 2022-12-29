@@ -3,7 +3,7 @@ import './style/style.css'
 import './style/circles.css'
 import './style/button1.css'
 import questionService from './services/questions'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import Menu from './containers/Menu'
 import Players from './containers/Players'
 import Play from './containers/Play'
@@ -13,12 +13,24 @@ const App = () => {
   const [players, setPlayers] = useState([])
   const [questions, setQuestions] = useState([])
 
+  // keep track of users page location and history
+  const location = useLocation()
+  const navigate = useNavigate()
+
   useEffect(() => {
+    // get all questions
     questionService
       .getAll()
       .then(initialQuestions => {
         setQuestions(initialQuestions)
       })
+
+    // check if user is not on the Menu page when refreshing site and redirect them to the main page
+    /* eslint-disable quotes */
+    if (location.pathname === "/players" || location.pathname === "/play") {
+      navigate("/")
+      /* eslint-enable quotes */
+    }
   }, [])
 
   return (

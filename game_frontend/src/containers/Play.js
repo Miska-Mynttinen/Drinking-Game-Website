@@ -2,6 +2,13 @@ import React from 'react'
 import Display from '../components/playComponents/Display'
 
 const Play = ({ checkedPackages, players, questions }) => {
+  // if packages or players state has reset return empty
+  if (checkedPackages.length === 0 || players === 0 || questions === 0) {
+    return (
+      <></>
+    )
+  }
+
   //append packages that have their checkbox checked with true state to packageList
   let packageList = []
   checkedPackages.forEach(checkedPackage => {
