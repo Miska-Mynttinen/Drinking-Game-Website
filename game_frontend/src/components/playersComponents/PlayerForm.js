@@ -9,6 +9,10 @@ const PlayerForm = ({ players, setPlayers }) => {
 
   const addPlayer = (event) => {
     event.preventDefault()
+    if (newPlayer === '') {
+      window.alert('Name can not be empty')
+      return
+    }
 
     //check for duplicates and inform user no duplicates allowed
     let duplicate = players.find(player => player === newPlayer)
@@ -30,12 +34,12 @@ const PlayerForm = ({ players, setPlayers }) => {
       <form onSubmit={addPlayer}>
         <div>
           player: <input
+            minLength={2}
+            maxLength={10}
             value={newPlayer}
             onChange={handlePlayerChange}
             placeholder = 'add player'
           />
-        </div>
-        <div>
           <button type="submit">add</button>
         </div>
       </form>
