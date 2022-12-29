@@ -7,7 +7,7 @@ const AllQuestion = ({ question }) => {
       return (
         <div>
           <div>{question.question}</div>
-          <div>Take {question.sips} sips</div>
+          <div>Drink {question.sips} sips</div>
         </div>
       )
     case 'would_you_rather': {
@@ -15,7 +15,7 @@ const AllQuestion = ({ question }) => {
         <div>
           <div>Everyone votes {<Emoji symbol='👍' label=''/>} or {<Emoji symbol='👎' label=''/>}</div>
           <div>{question.question}</div>
-          <div>The outvoted take {question.sips} sips</div>
+          <div>The outvoted drink {question.sips} sips</div>
         </div>
       )
     }

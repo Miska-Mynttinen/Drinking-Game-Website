@@ -6,6 +6,7 @@ import NextButton from './displayComponents/NextButton'
 const Display = ({ filteredQuestions, players }) => {
   const [questions, setQuestions] = useState(filteredQuestions)
   const [rand, setRand] = useState(Math.floor(Math.random() * filteredQuestions.length))
+  const [selectedPlayer, setSelectedPlayer] = useState(players[Math.floor(Math.random() * players.length)])
 
   // Select a random question and player based on index
   let selectedQuestion = questions[rand]
@@ -16,10 +17,19 @@ const Display = ({ filteredQuestions, players }) => {
       return (
         <div>
           <div>
-            <PlayerQuestion question={selectedQuestion} player={players[Math.floor(Math.random() * players.length)]} />
+            <PlayerQuestion question={selectedQuestion} player={selectedPlayer} />
           </div>
           <div>
-            <NextButton selectedQuestion={selectedQuestion} questions={questions} setQuestions={setQuestions} setRand={setRand} filteredQuestions={filteredQuestions} />
+            <NextButton
+              selectedQuestion={selectedQuestion}
+              questions={questions}
+              setQuestions={setQuestions}
+              setRand={setRand}
+              filteredQuestions={filteredQuestions}
+              players={players}
+              selectedPlayer={selectedPlayer}
+              setSelectedPlayer={setSelectedPlayer}
+            />
           </div>
         </div>
       )
@@ -30,7 +40,16 @@ const Display = ({ filteredQuestions, players }) => {
             <AllQuestion question={selectedQuestion} />
           </div>
           <div>
-            <NextButton selectedQuestion={selectedQuestion} questions={questions} setQuestions={setQuestions} setRand={setRand} filteredQuestions={filteredQuestions} />
+            <NextButton
+              selectedQuestion={selectedQuestion}
+              questions={questions}
+              setQuestions={setQuestions}
+              setRand={setRand}
+              filteredQuestions={filteredQuestions}
+              players={players}
+              selectedPlayer={selectedPlayer}
+              setSelectedPlayer={setSelectedPlayer}
+            />
           </div>
         </div>
       )

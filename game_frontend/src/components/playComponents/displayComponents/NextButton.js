@@ -1,8 +1,13 @@
 import React from 'react'
 
-const NextButton = ({ selectedQuestion, questions, setQuestions, setRand, filteredQuestions }) => {
+const NextButton = ({ selectedQuestion, questions, setQuestions, setRand, filteredQuestions, players, selectedPlayer, setSelectedPlayer }) => {
 
   const handleNextClick = () => {
+    // sets selectedPlayer to be someone else then the previous one
+    if  (selectedQuestion.who === 'player') {
+      setSelectedPlayer(players.filter(player => player !== selectedPlayer)[Math.floor(Math.random() * (players.length - 1))])
+    }
+
     // resets questions and random number if running out of questions
     if (questions.length === 1) {
       setRand(Math.floor(Math.random() * filteredQuestions.length))

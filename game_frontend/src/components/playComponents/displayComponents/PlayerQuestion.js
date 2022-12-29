@@ -6,7 +6,7 @@ const PlayerQuestion = ({ question, player }) => {
       return (
         <div>
           <div>{player}</div>
-          <div>Truth or take {question.sips} sips</div>
+          <div>Truth or Drink {question.sips} sips</div>
           <div>{question.question}</div>
         </div>
       )
@@ -14,7 +14,7 @@ const PlayerQuestion = ({ question, player }) => {
       return (
         <div>
           <div>{player}</div>
-          <div>Dare or take {question.sips} sips</div>
+          <div>Dare or Drink {question.sips} sips</div>
           <div>{question.question}</div>
         </div>
       )

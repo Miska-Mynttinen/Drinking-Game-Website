@@ -13,9 +13,6 @@ const Play = ({ checkedPackages, players, questions }) => {
   //filter questions based on packages that have their checkbox checked with true state
   const filteredQuestions = questions.filter(question => packageList.includes(question.pack))
 
-  // get a copy of players to pass on to display
-  //const allPlayers = players
-
   return (
     <div>
       <div className="context" style={{ zIndex: 1 }}>
