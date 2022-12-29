@@ -1,14 +1,19 @@
-import { useEffect } from 'react'
+import React from 'react'
 
-const NextButton = ({ selectedQuestion, questions, setQuestions, setRand }) => {
+const NextButton = ({ selectedQuestion, questions, setQuestions, setRand, filteredQuestions }) => {
 
   const handleNextClick = () => {
-    setQuestions(questions.filter(question => question.question !== selectedQuestion))
-  }
+    // resets questions and random number if running out of questions
+    if (questions.length === 1) {
+      setRand(Math.floor(Math.random() * filteredQuestions.length))
+      setQuestions(filteredQuestions)
+      return
+    }
 
-  useEffect(() => {
-    setRand(Math.floor(Math.random() * questions.length))
-  }, [questions])
+    // sets random number and removes asked question from the question pool
+    setRand(Math.floor(Math.random() * (questions.length - 1)))
+    setQuestions(questions.filter(question => question.question !== selectedQuestion.question))
+  }
 
 
   return (

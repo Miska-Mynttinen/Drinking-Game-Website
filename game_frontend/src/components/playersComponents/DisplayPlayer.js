@@ -1,9 +1,15 @@
 import React from 'react'
 
-const DisplayPlayer = ({ player }) => {
+const DisplayPlayer = ({ player, players, setPlayers }) => {
+
+  const handleDelete = () => {
+    setPlayers(players.filter(p => p !== player))
+    console.log('player deleted', player)
+  }
+
   return (
     <div>
-      {player}
+      {player} <button onClick={handleDelete}>delete</button>
     </div>
   )
 }

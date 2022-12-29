@@ -8,8 +8,8 @@ const Players = ({ players, setPlayers }) => {
     <div>
       <div className="context" style={{ zIndex: 1 }}>
         <PlayerForm players={players} setPlayers={setPlayers} />
-        <DisplayPlayers players={players} />
-        <StartButton players={players}/>
+        <DisplayPlayers players={players} setPlayers={setPlayers} />
+        <StartButton players={players} />
       </div>
       <div className="area" >
         <ul className="circles">

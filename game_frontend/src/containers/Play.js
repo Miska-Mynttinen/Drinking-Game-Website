@@ -9,20 +9,17 @@ const Play = ({ checkedPackages, players, questions }) => {
       packageList.push(Object.keys(checkedPackage)[0])
     }
   })
-  console.log('packageList', packageList)
 
   //filter questions based on packages that have their checkbox checked with true state
-  let filteredQuestions = []
-  filteredQuestions = questions.filter(question => packageList.includes(question.pack))
-  console.log('filteredQuestions', filteredQuestions)
+  const filteredQuestions = questions.filter(question => packageList.includes(question.pack))
 
   // get a copy of players to pass on to display
-  let allPlayers = [...players]
+  //const allPlayers = players
 
   return (
     <div>
       <div className="context" style={{ zIndex: 1 }}>
-        <Display filteredQuestions={filteredQuestions} players={allPlayers} />
+        <Display filteredQuestions={filteredQuestions} players={players} />
       </div>
       <div className="area" >
         <ul className="circles">
