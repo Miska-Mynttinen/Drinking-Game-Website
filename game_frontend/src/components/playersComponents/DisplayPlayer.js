@@ -4,7 +4,6 @@ const DisplayPlayer = ({ player, players, setPlayers }) => {
 
   const handleDelete = () => {
     setPlayers(players.filter(p => p !== player))
-    console.log('player deleted', player)
   }
 
   return (

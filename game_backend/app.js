@@ -6,6 +6,7 @@ const mongoose = require('mongoose')
 require('express-async-errors')
 
 const questionsRouter = require('./controllers/questions')
+const redirectRouter = require('./controllers/redirect')
 const middleware = require('./utils/middleware')
 const logger = require('./utils/logger')
 
@@ -25,6 +26,8 @@ app.use(express.json())
 app.use(middleware.requestLogger)
 
 app.use('/api/questions', questionsRouter)
+// redirects user back to menu page if refreshing
+app.use('/', redirectRouter)
 
 app.use(middleware.unknownEndpoint)
 app.use(middleware.errorHandler)
