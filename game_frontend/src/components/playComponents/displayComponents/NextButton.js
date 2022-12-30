@@ -23,7 +23,7 @@ const NextButton = ({ selectedQuestion, questions, setQuestions, setRand, filter
 
   return (
     <div>
-      <button className='button1' onClick={handleNextClick}>
+      <button className='buttonStart' onClick={handleNextClick}>
           Next
       </button>
     </div>

@@ -1,0 +1,109 @@
+.buttonPlay { 
+  display:inline-block; 
+  padding:1em 2.9em; 
+  border:0.1em solid #FFFFFF; 
+  margin:0 0em 0.3em 0; 
+  border-radius:0.1em; 
+  box-sizing: border-box; 
+  text-decoration:none; 
+  font-family:'Roboto',sans-serif; 
+  font-size: calc(10px + 2vmin);
+  font-weight:300; 
+  color:#FFFFFF;
+  background-color: rgb(16,125,172);
+  text-align:center; 
+  transition: all 0.2s; 
+}
+
+.buttonForm { 
+  display:inline-block; 
+  padding:0.5em 0.5em; 
+  border:0.1em solid #FFFFFF; 
+  margin:0 0em 0em 0.3em; 
+  border-radius:0.1em; 
+  box-sizing: border-box; 
+  text-decoration:none; 
+  font-family:'Roboto',sans-serif; 
+  font-size: 18px;
+  font-weight: 300;
+  color: gray;
+  background-color: rgb(255,250,250);
+  text-align:center; 
+  transition: all 0.2s; 
+}
+
+.buttonDelete { 
+  display:inline-block; 
+  padding:0.1em 0.1em;
+  border:0.1em solid #696969; 
+  margin:0 0em 0.1em 0em; 
+  box-sizing: border-box; 
+  text-decoration:none; 
+  font-family:'Roboto',sans-serif; 
+  font-size: 18px;
+  font-weight: 300;
+  color: gray;
+  background-color: rgb(240,255,255);
+  text-align:center; 
+  transition: all 0.2s; 
+}
+
+.buttonStart { 
+  display:inline-block; 
+  padding:1em 5.8em; 
+  border:0.1em solid #FFFFFF; 
+  margin:0.5em 0em 0.3em 0;
+  border-radius:0.1em; 
+  box-sizing: border-box; 
+  text-decoration:none; 
+  font-family:'Roboto',sans-serif; 
+  font-size: calc(10px + 2vmin);
+  font-weight:300; 
+  color:#FFFFFF;
+  background-color: rgb(16,125,172);
+  text-align:center; 
+  transition: all 0.2s; 
+}
+
+
+.buttonPlay:hover {
+  color:#000000;
+  background-color:#FFFFFF;
+}
+
+.buttonForm:hover {
+  color:#000000;
+  background-color:#FFFFFF;
+}
+
+.buttonDelete:hover {
+  color:#000000;
+  background-color:#FFFFFF;
+}
+
+.buttonStart:hover {
+  color:#000000;
+  background-color:#FFFFFF;
+}
+
+@media all and (max-width:30em) { 
+  .buttonPlay { 
+    display:block; 
+    margin:0.4em auto; 
+  }
+
+  .buttonForm { 
+    display:block; 
+    margin:0.4em auto; 
+  }
+
+  .buttonDelete {
+    display:block; 
+    margin:0.4em auto; 
+  }
+
+  .buttonStart {
+    display:block; 
+    margin:0.4em auto; 
+  }
+}

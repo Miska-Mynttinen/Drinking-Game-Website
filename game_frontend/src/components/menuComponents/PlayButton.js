@@ -20,13 +20,13 @@ const PlayButton = ({ checkedPackages }) => {
   return (
     <div>
       <div style={hideWhenVisible}>
-        <button className='button1' onClick={handleNoBoxesClick}>
+        <button className='buttonPlay' onClick={handleNoBoxesClick}>
           Play
         </button>
       </div>
       <div style={showWhenVisible}>
         <Link to="/players">
-          <button type='button' className='button1'>
+          <button type='button' className='buttonPlay'>
             Play
           </button>
         </Link>

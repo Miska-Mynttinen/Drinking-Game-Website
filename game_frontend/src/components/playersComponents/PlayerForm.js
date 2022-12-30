@@ -30,17 +30,18 @@ const PlayerForm = ({ players, setPlayers }) => {
 
   return (
     <div>
-      <div>Add players</div>
+      <h1>Add players</h1>
       <form onSubmit={addPlayer}>
-        <div>
-          player: <input
+        <div style={{ fontSize: 25, color: 'white', fontFamily: 'Bold' }}>
+          Player: <input
             minLength={2}
             maxLength={10}
             value={newPlayer}
             onChange={handlePlayerChange}
             placeholder = 'add player'
+            type="text"
           />
-          <button type="submit">add</button>
+          <button type="submit" className='buttonForm'>add</button>
         </div>
       </form>
     </div>

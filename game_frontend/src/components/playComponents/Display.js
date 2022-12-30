@@ -13,7 +13,7 @@ const Display = ({ filteredQuestions, players }) => {
 
   // checks if question is for a single player or everyone and displays based on it
   switch (selectedQuestion.who) {
-    case 'player':
+    case 'player': {
       return (
         <div>
           <div>
@@ -33,7 +33,8 @@ const Display = ({ filteredQuestions, players }) => {
           </div>
         </div>
       )
-    case 'all':
+    }
+    case 'all': {
       return (
         <div>
           <div>
@@ -53,6 +54,7 @@ const Display = ({ filteredQuestions, players }) => {
           </div>
         </div>
       )
+    }
   }
 }
 

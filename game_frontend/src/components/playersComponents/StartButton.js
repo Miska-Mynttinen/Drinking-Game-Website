@@ -7,7 +7,7 @@ const StartButton = ({ players }) => {
     return (
       <div>
         <Link to="/play">
-          <button type='button' className='button1'>
+          <button type='button' className='buttonStart'>
             Start
           </button>
         </Link>

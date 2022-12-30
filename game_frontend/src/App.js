@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './style/style.css'
 import './style/circles.css'
-import './style/button1.css'
+import './style/buttons.css'
 import questionService from './services/questions'
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import Menu from './containers/Menu'

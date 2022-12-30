@@ -1,15 +1,10 @@
 import React from 'react'
 
 const TopText = () => {
-  const topTextStyle = {
-    marginBottom: 25,
-    fontFamily: 'Trocchi',
-    color: 'white'
-  }
   return (
-    <div style={topTextStyle}>
+    <h1>
       Select packages and click play
-    </div>
+    </h1>
   )
 }
 

@@ -36,7 +36,7 @@
       "sips": 4
     },
     {
-      "question": "Show them toes?",
+      "question": "Show them toes",
       "pack": "bruh",
       "type": "dare_or_drink",
       "who": "player",
@@ -55,6 +55,20 @@
       "type": "truth_or_drink",
       "who": "player",
       "sips": 2
+    },
+    {
+      "question": "Who's most likely to pass out tonight?",
+      "pack": "standard",
+      "type": "most_likely_to",
+      "who": "all",
+      "sips": 4
+    },
+    {
+      "question": "Make someone laugh in the next 30 seconds",
+      "pack": "standard",
+      "type": "choose",
+      "who": "player",
+      "sips": 3
     }
   ]
 }

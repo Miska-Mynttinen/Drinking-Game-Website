@@ -8,8 +8,8 @@ const DisplayPlayer = ({ player, players, setPlayers }) => {
   }
 
   return (
-    <div>
-      {player} <button onClick={handleDelete}>delete</button>
+    <div style={{ marginLeft: 5, fontFamily: 'Trocchi' }}>
+      {player} <button onClick={handleDelete} className='buttonDelete'>delete</button>
     </div>
   )
 }
