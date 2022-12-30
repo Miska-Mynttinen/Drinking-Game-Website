@@ -1,0 +1,10 @@
+POST http://localhost:3003/api/questions 
+Content-Type: application/json
+
+{
+  "question": "", 
+  "pack": "", 
+  "type": "", 
+  "who": "", 
+  "sips": 3
+}

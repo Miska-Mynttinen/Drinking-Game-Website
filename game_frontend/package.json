@@ -19,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server -p3001 --watch mockData.json",
+    "server": "json-server -p3003 --watch mockData.json",
     "eslint": "eslint ."
   },
   "eslintConfig": {
@@ -43,5 +43,6 @@
   "devDependencies": {
     "eslint-plugin-jest": "^27.1.7",
     "json-server": "^0.17.1"
-  }
+  },
+  "proxy": "http://localhost:3003"
 }
