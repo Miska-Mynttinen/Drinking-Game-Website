@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node index.js",
+    "start": "node index.js",
     "dev": "cross-env NODE_ENV=development nodemon index.js",
     "build:ui": "rmdir /s build && mkdir build && cd C:\\Users\\miska\\Drinking-Game-Website\\game_frontend && npm run build && xcopy /E C:\\Users\\miska\\Drinking-Game-Website\\game_frontend\\build C:\\Users\\miska\\Drinking-Game-Website\\game_backend\\build",
     "lint": "eslint .",

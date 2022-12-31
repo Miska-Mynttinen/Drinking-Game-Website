@@ -1,4 +1,4 @@
-# Drinking-Game-Website: 
+# Drinking-Game-Website: https://drinkinggame.fly.dev/
 Question based drinking game website
 
 Deployed with fly.io
