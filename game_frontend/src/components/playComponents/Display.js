@@ -8,7 +8,7 @@ const Display = ({ filteredQuestions, players }) => {
   const [rand, setRand] = useState(Math.floor(Math.random() * filteredQuestions.length))
   const [selectedPlayer, setSelectedPlayer] = useState(players[Math.floor(Math.random() * players.length)])
 
-  // Select a random question and player based on index
+  // Select a random question based on index
   let selectedQuestion = questions[rand]
 
   // checks if question is for a single player or everyone and displays based on it

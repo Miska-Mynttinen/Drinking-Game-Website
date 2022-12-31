@@ -118,8 +118,6 @@ h1 {
   animation: fade 3s ease-in-out 1s infinite;
   pointer-events:  none;
   opacity: 0;
-
-
 }
 
 @keyframes fade {

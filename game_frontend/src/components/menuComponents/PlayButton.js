@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 const PlayButton = ({ checkedPackages }) => {
   let view = false
 
+  // if a package is selected make view "" true so the game can start
   checkedPackages.forEach(checked => {
     if (Object.values(checked)[0] === true) {
       view = true

@@ -65,23 +65,7 @@
   transition: all 0.2s; 
 }
 
-
-.buttonPlay:hover {
-  color:#000000;
-  background-color:#FFFFFF;
-}
-
-.buttonForm:hover {
-  color:#000000;
-  background-color:#FFFFFF;
-}
-
-.buttonDelete:hover {
-  color:#000000;
-  background-color:#FFFFFF;
-}
-
-.buttonStart:hover {
+.buttonPlay:hover, .buttonForm:hover, .buttonDelete:hover, .buttonStart:hover {
   color:#000000;
   background-color:#FFFFFF;
 }

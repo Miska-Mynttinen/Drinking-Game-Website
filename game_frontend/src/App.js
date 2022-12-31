@@ -13,11 +13,6 @@ const App = () => {
   const [players, setPlayers] = useState([])
   const [questions, setQuestions] = useState([])
 
-  /* NO LONGER DOES ANYTHING BECAUSE REROUTING WHEN REFRESHING DONE FROM BACKEND
-  // keep track of users page location and history
-  const location = useLocation()
-  const navigate = useNavigate()*/
-
   useEffect(() => {
     // get all questions
     questionService
@@ -25,20 +20,10 @@ const App = () => {
       .then(initialQuestions => {
         setQuestions(initialQuestions)
       })
-
-    /* NO LONGER DOES ANYTHING BECAUSE REROUTING WHEN REFRESHING DONE FROM BACKEND
-    // check if user is not on the Menu page when refreshing site and redirect them to the main page
-    /* eslint-disable quotes
-    if (location.pathname === "/players" || location.pathname === "/play") {
-      navigate("/")
-      /* eslint-enable quotes
-    }
-    */
   }, [])
 
   return (
     <div>
-      {/*create your own containers and components*/}
       <Routes>
         <Route exact path="/" element={<Menu checkedPackages={checkedPackages} setCheckedPackages={setCheckedPackages} />}/>
         <Route exact path="/players" element={<Players players={players} setPlayers={setPlayers} />}/>

@@ -21,11 +21,13 @@ mongoose.connect(config.MONGODB_URI)
   })
 
 app.use(cors())
-app.use(express.static('build')) //ottaa buildistä frontendin
+app.use(express.static('build')) //takes frontend from build
 app.use(express.json())
 app.use(middleware.requestLogger)
 
+// questions database HTTP requests
 app.use('/api/questions', questionsRouter)
+
 // redirects user back to menu page if refreshing
 app.use('/', redirectRouter)
 
